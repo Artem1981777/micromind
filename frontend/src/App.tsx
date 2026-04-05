@@ -25,7 +25,7 @@ async function analyzeMood(thought: string) {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
-      model: "claude-sonnet-4-20250514",
+      model: "claude-sonnet-4-5",
       max_tokens: 200,
       messages: [{ role: "user", content: `Analyze the emotional tone. Respond ONLY with valid JSON no markdown: {"mood":"one of: joyful/curious/anxious/peaceful/frustrated/melancholic/motivated/confused/neutral","score":<integer -100 to 100>,"reflection":"<one sentence max 12 words>"}\n\nThought: "${thought}"` }],
     }),
